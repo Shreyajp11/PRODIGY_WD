@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outer-circle {
+    width: 250px;
+    height: 250px;
+    border: 50%;
+    border-radius: 50%;
+    background-color: rgb(196, 153, 153);
+    display: flex visible;
+    align-items: center;
+    justify-content: center;
+    border-spacing: 20%;
+    /* margin-top: 20%;
+    border-top: 20%; */
+}
+
+.animation-bg {
+    background: linear-gradient(-45deg, #ee7752, orange, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 7s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.inner-circle {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    color: rgb(255, 248, 248);
+    font-size: 23px;
+}
+
+.minute {
+    font-size: 47px;
+}
+
+.sec {
+    font-size: 37px;
+}
+
+.msec {
+    font-size: 27px;
+}
+
+.button-wrapper {
+    width: 250px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: white;
+    color: black;
+}
+
+.laps {
+    list-style: none;
+    color: white;
+    width: 250px;
+    height: 250px;
+    overflow: auto;
+    position: relative;
+    padding: 30px 0;
+}
+
+.laps::-webkit-scrollbar {
+    display: none;
+}
+
+.lap-item {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    text-align: center;
+    border: 1px solid #444;
+    border-radius: 50px;
+    margin-bottom: 15px;
+}
+
+.number {
+    color: #cccccc;
+}
+
+.time-stamp {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+.lab-clear-button {
+    position: fixed;
+    display: block;
+    z-index: 1000;
+    bottom: 80px;
+    ;
+    left: 50%;
+    transform: translate(-50%);
+    width: 183px;
+    padding: 10px 0;
+    background-color: rgb(255, 255, 255, 0.9);
+    border-radius: 50px;
+    border: 1px solid white;
+    color: rgb(53, 36, 36);
+    cursor: pointer;
+}
+
+.hidden {
+    visibility: hidden;
+}
